@@ -6,23 +6,22 @@ import jyserver.Flask as jsf
 import numpy as np
 import pandas as pd 
 
-
-
 app = Flask(__name__)  
 
 @jsf.use(app)
 class App:
-    # def __init__(self):
+    def __init__(self):
+        self.input = ""
     
     
     def test(self):
+       
         syd=pd.read_csv('diffsydiw.csv').dropna()
         dia=pd.read_csv('dia_t.csv').dropna()
         sym=pd.read_csv('sym_t.csv').dropna()
-
         
-        print(sym.head())
-        print(dia.head())
+        self.js.document.getElementById('count').innerHTML = 5
+
 
 
 @app.route("/")

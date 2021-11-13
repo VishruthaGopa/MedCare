@@ -1,98 +1,77 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <title>MedCare - Home</title>
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
 
-<head>
-  <meta charset="utf-8">
-  <title>Ember Watch - Home</title>
-  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-  <link href="https://api.mapbox.com/mapbox-gl-js/v2.4.0/mapbox-gl.css" rel="stylesheet">
-  <script src="https://api.mapbox.com/mapbox-gl-js/v2.4.0/mapbox-gl.js"></script>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='styles/styles.css') }}"
+    /> -->
+    <link rel="stylesheet" href="styles.css" />
 
-  <style>
-  </style>
-</head>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-<body style="background-color: rgba(250,231,214,255)">
-  <ul class="navbar">
-    <li style="float: right">
-      <a class="active" href="/index.html">placeHolder</a>
-    </li>
-    <li><a href="/map.html">Map</a></li>
-    <li><a href="/aboutUs.html">About Us</a></li>
-  </ul>
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+      }
+      .bg {
+        background-image: url("https://media.discordapp.net/attachments/908766276623695922/909190340823638016/cosmeticdentalsmile.png?width=815&height=543");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    </style>
 
-  <div class="parent">
-    <div class="jumbotron">
-      <div class="left">
-        <div class="logo-wrapper">
-          <img src="/imgs/logo.JPG" class="img-logo" id="logo" alt="logo" width="250px" height="250px">
-        </div>
+  </head>
+
+  <body style="background-color: f3edea">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <img src="/imgs/logo cropped.JPG" class="img-logo" id="logo" alt="logo" width="250px" height="70px">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav"></div>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Home<span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/SymptomChecker.html">SymptomChecker</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/aboutUs.html">About Us</a>
+          </li>
+        </ul>
       </div>
-      <div class="text">
+    </nav>
+    
+    <div class="bg"></div>
+    <div class="bg">
+      <div class="centered">
+        <p style= "color:#63a8ce;font-family:verdana;">SLOGAN</p>
         <i>
-          <h1 style="font-family:verdana;font-size:75px;color:black;">EMBERWATCH</h1>
+            <p style = "color:#3555a2;font-family:verdana;"> Are you trying to figure out what's causing your symptoms? We hope this helps you identify your symptoms and potential conditions.
+              
+            </p>
+            
         </i>
-        <p style="padding-top: 10px;font-size:30px;color:green;font-family:verdana;">Don't let your future go up in smoke!!</p>
       </div>
     </div>
-  </div>
+  
 
-
-
-  <div id="demo" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ul class="carousel-indicators">
-      <li data-target="#demo" data-slide-to="0" class="active"></li>
-      <li data-target="#demo" data-slide-to="1"></li>
-      <li data-target="#demo" data-slide-to="2"></li>
-      <li data-target="#demo" data-slide-to="3"></li>
-      <li data-target="#demo" data-slide-to="4"></li>
-    </ul>
-
-    <!-- The slideshow -->
-    <div class="carousel-inner" role="listbox">
-      <div class="carousel-item active" style="background-color: #fae7d6">
-        <img class="d-block w-50 mx-auto" src="/imgs/forest2.jpg" alt="Forest1">
-      </div>
-      <div class="carousel-item " style="background-color: #fae7d6;">
-        <img class="d-block w-50 mx-auto" src="/imgs/firefire.jpg" alt="Forest2">
-      </div>
-      <div class="carousel-item " style="background-color: #fae7d6;">
-        <img class="d-block w-50 mx-auto" src="/imgs/forest3.jpg" alt="Forest3">
-      </div>
-      <div class="carousel-item " style="background-color: #fae7d6;">
-        <img class="d-block w-50 mx-auto" src="/imgs/roadfire.jpg" alt="Forest4">
-      </div>
-      <div class="carousel-item " style="background-color: #fae7d6;">
-        <img class="d-block w-50 mx-auto" src="/imgs/forestfiree.jpg" alt="Forest5">
-      </div>
-
-    </div>
-
-    <!-- Left and right controls -->
-    <a class="carousel-control-prev" href="#demo" data-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </a>
-    <a class="carousel-control-next" href="#demo" data-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </a>
-
-    <div>
-      <!-- Left and right controls -->
-      <a class="carousel-control-prev" href="#demo" data-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </a>
-      <a class="carousel-control-next" href="#demo" data-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </a>
-    </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-</body>
-
+  </body>
 </html>
