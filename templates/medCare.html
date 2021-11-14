@@ -34,7 +34,7 @@
         margin: 0;
       }
       .bg {
-        background-image: url("http://wallup.net/wp-content/uploads/2017/03/27/198689-texture-abstract-blue.jpg");
+        background-image: url("watercolour.JPG");
         height: 100%;
         background-position: center;
         background-repeat: no-repeat;
@@ -64,84 +64,87 @@
       <div class="collapse navbar-collapse" id="navbarNav"></div>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="./templates/index.html">Home<span class="sr-only"></span></a>
+            <a class="nav-link" href="/templates/index.html">Home<span class="sr-only"></span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./templates/medCare.html">SymptomChecker</a>
+            <a class="nav-link" href="/templates/medCare.html">SymptomChecker</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./templates/aboutUs.html">About Us</a>
+            <a class="nav-link" href="/templates/aboutUs.html">About Us</a>
           </li>
         </ul>
       </div>
     </nav>
 
-    <div class="container animate-top">
-      <div class="center">
-        <h1 id="intro">
-          Are you sick right now? Is there pain in your body? Medcare is a tool
-          you can use to do some research on possible symptoms you have!
-        </h1>
-
-        <!-- Symptom -->
-        <div class="input-field">
-          <input
-            type="text"
-            id="sym"
-            placeholder="Symptom"
-            onFocus="this.placeholder=''"
-            required
-          />
-        </div>
-
-        <span style="display: block; height: 30px"></span>
-
-        <!-- Submit -->
-
-        <div style="text-align: center">
-          <button class="button" onclick="server.test()" type="submit">
-            Submit
-          </button>
-        </div>
-
-        <span style="display: block; height: 10px"></span>
-
-        <p id="message"></p>
-        <div class="dropdown">
-          <span id="one"></span>
-          <div class="dropdown-content">
-            <p id="dropOne"></p>
+    <div class="bg">
+      <div class="container animate-top">
+        <div class ="centered">
+          <h1 id="intro" style= "color:#f3edea;font-family: Trebuchet MS;"> 
+            Are you currently ill? Is there any discomfort in your body? MedCare is a resource you can use to do research on potential symptoms you may be experiencing!
+          </h1>
+  
+          <!-- Symptom -->
+          
+          <div class="input-field">
+            <input
+              type="text"
+              id="sym"
+              placeholder="Symptom"
+              onFocus="this.placeholder=''"
+              required
+            />
           </div>
-        </div>
 
-        <span style="display: block; height: 10px"></span>
+          <!-- Submit -->
 
-        <div class="dropdown">
-          <span id="two"></span>
-          <div class="dropdown-content">
-            <p id="dropTwo"></p>
+          <div style="text-align: center">
+            <button class="button" onclick="server.test()" type="submit">
+              Submit
+            </button>
           </div>
-        </div>
-
-        <span style="display: block; height: 10px"></span>
-
-        <div class="dropdown">
-          <span id="three"></span>
-          <div class="dropdown-content">
-            <p id="dropThree"></p>
+  
+          <span style="display: block; height: 10px"></span>
+  
+          <p id="message"></p>
+          <div class="dropdown">
+            <span id="one"></span>
+            <div class="dropdown-content">
+              <p id="dropOne"></p>
+            </div>
           </div>
-        </div>
-
-        <span style="display: block; height: 10px"></span>
-
-        <div class="dropdown">
-          <span id="four"></span>
-          <div class="dropdown-content">
-            <p id="dropFour"></p>
+  
+          <span style="display: block; height: 10px"></span>
+  
+          <div class="dropdown">
+            <span id="two"></span>
+            <div class="dropdown-content">
+              <p id="dropTwo"></p>
+            </div>
           </div>
+  
+          <span style="display: block; height: 10px"></span>
+  
+          <div class="dropdown">
+            <span id="three"></span>
+            <div class="dropdown-content">
+              <p id="dropThree"></p>
+            </div>
+          </div>
+  
+          <span style="display: block; height: 10px"></span>
+  
+          <div class="dropdown">
+            <span id="four"></span>
+            <div class="dropdown-content">
+              <p id="dropFour"></p>
+            </div>
+          </div>
+          
         </div>
-        
       </div>
+
     </div>
+
+    
   </body>
 </html>
