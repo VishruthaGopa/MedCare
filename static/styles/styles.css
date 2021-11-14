@@ -34,7 +34,6 @@
   background-color: #ffffff;
 }
 
-
 /*SYMPTOM CHECKER */
 .container {
   margin-top: 40px;
@@ -80,37 +79,29 @@ input {
   color: #111;
 }
 
-
-
 ::placeholder {
   color: blue;
   opacity: 0.5;
 }
 
-
-
 .button {
   width: 15vw;
   height: 5vh;
   border-radius: 25px;
-  font-family: verdana;  font-weight: bold;
+  font-family: verdana;
+  font-weight: bold;
   border-color: #42b2e7;
   color: #42b2e7;
   box-shadow: 0 0 40px 40px #006d97 inset, 0 0 0 0 #006d97;
   -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
   display: inline-block;
-  
 }
 
 .button:hover {
   box-shadow: 0 0 10px 0 #006d97 inset, 0 0 10px 4px #006d97;
   color: #63a8ce;
 }
-<<<<<<< Updated upstream
-
-/*Symptom Checker Ends*/
-=======
 .dropdown {
   position: relative;
   display: inline-block;
@@ -148,4 +139,3 @@ table {
   border-right-style: none;
   border-bottom-style: none;
 }
->>>>>>> Stashed changes
