@@ -1,4 +1,4 @@
-/* nav bar */
+/* NAV BAR */
 .navbar {
   list-style-type: none;
   margin: 0;
@@ -34,8 +34,10 @@
   background-color: #ffffff;
 }
 
+
+/*SYMPTOM CHECKER */
 .container {
-  margin-top: 20px;
+  margin-top: 40px;
   border: 3px solid rgb(103, 228, 221);
   width: 100vw;
   height: 90vh;
@@ -53,14 +55,14 @@ form {
 }
 .input-field {
   border-radius: 25px;
-  position: relative;
+  position: center;
   width: 100%;
   height: 44px;
   line-height: 44px;
 }
 label {
   position: absolute;
-  top: 0;
+  top: -10;
   left: 0;
   width: 100%;
   color: #d3d3d3;
@@ -72,31 +74,38 @@ input {
   text-align: center;
   border: 0;
   outline: 0;
-  padding: 0.5rem 0;
-  border-bottom: 2px solid #d3d3d3;
+  padding: 2.5rem 0;
+  border-bottom: 2px solid #f3edea;
   box-shadow: none;
   color: #111;
 }
+
+
+
 ::placeholder {
-  color: red;
+  color: blue;
   opacity: 0.5;
 }
+
+
+
 .button {
   width: 15vw;
   height: 5vh;
   border-radius: 25px;
-  font-family: "Quicksand", sans-serif;
-
-  font-size: 25px;
-  font-weight: bold;
-  border-color: #34db87;
-  color: rgb(255, 255, 255);
-  box-shadow: 0 0 40px 40px #34db7f inset, 0 0 0 0 #13b167;
+  font-family: verdana;  font-weight: bold;
+  border-color: #42b2e7;
+  color: #42b2e7;
+  box-shadow: 0 0 40px 40px #006d97 inset, 0 0 0 0 #006d97;
   -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
   display: inline-block;
+  
 }
+
 .button:hover {
-  box-shadow: 0 0 10px 0 #13b167 inset, 0 0 10px 4px #13b167;
-  color: rgb(97, 91, 91);
+  box-shadow: 0 0 10px 0 #006d97 inset, 0 0 10px 4px #006d97;
+  color: #63a8ce;
 }
+
+/*Symptom Checker Ends*/

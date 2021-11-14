@@ -1,0 +1,45 @@
+
+/* nav bar */
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  overflow: hidden;
+  background-color: #6671ec;
+  position: -webkit-sticky; /* Safari */
+}
+
+.navbar li {
+  float: right;
+}
+
+.navbar li a {
+  display: block;
+  color: rgb(0, 0, 0);
+  text-align: right;
+  font-size: 30px;
+  padding: 28px 30px;
+  text-decoration: none;
+}
+
+.navbar li a:hover:not(.active) { /*HOVERING */
+  text-align: right;
+  background-color: #42b2e7;
+}
+
+.active { /*ACTIVE TAB */
+  text-align: right;
+  background-color: #ffffff;
+}
+
+/* nav bar end */
+
+
+
+/*ROUGH STARTS*/
+
+
+
+
+/*ROUGH ENDS*/

@@ -22,7 +22,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <style>
-      body,
+      /*body,
       html {
         height: 100%;
         margin: 0;
@@ -33,6 +33,48 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+      }*/
+
+      body, html {
+        height: 100%;
+        margin: 0;
+        font-family: Calibri;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .bg-image {
+        /* Full height */
+        height: 100%; 
+        
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      /* Images used */
+      .img1 { background-image: url("/imgs/medlab.jpg"); }
+      .img2 { background-image: url("/imgs/smile-photo.png"); }
+      .img3 { background-image: url("/imgs/write.jpg"); }
+
+      /* Position text in the middle of the page/image */
+      .bg-text {
+        background-color: #006d97; /* Fallback color */
+        background-color: rgb(0, 109, 151, 0.4); /* 006d97 fades out */
+        color: white;
+        font-size: 40px;
+        border: 10px solid #f1f1f1;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        width: 600px;
+        padding: 20px;
+        text-align: center;
       }
     </style>
 
@@ -59,19 +101,14 @@
       </div>
     </nav>
     
-    <div class="bg"></div>
-    <div class="bg">
-      <div class="centered">
-        <p style= "color:#63a8ce;font-family:verdana;">SLOGAN</p>
-        <i>
-            <p style = "color:#3555a2;font-family:verdana;"> Are you trying to figure out what's causing your symptoms? We hope this helps you identify your symptoms and potential conditions.
-              
-            </p>
-            
-        </i>
-      </div>
-    </div>
-  
+    <!--<div class="bg"></div>-->
+    
+    <div class="bg-image img1"></div>
+    <div class="bg-image img2"></div>
+    <div class="bg-image img3"></div>
 
+    <div class="bg-text">
+        Are you trying to figure out what's causing your symptoms? We hope this helps you identify your symptoms and potential conditions.
+    </div>
   </body>
 </html>

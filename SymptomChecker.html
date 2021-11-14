@@ -12,6 +12,32 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+      }
+      .bg {
+        background-image: url("http://wallup.net/wp-content/uploads/2017/03/27/198689-texture-abstract-blue.jpg");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      
+      /* Centered text */
+      .centered {
+        position: absolute;
+        font-size: 20px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+
+    </style>
 
 </head>
 
@@ -36,39 +62,47 @@
     </div>
   </nav>
     
-
+  <div class = "bg">  
 
     <div class="container animate-top">
       <div class="center">
-        <h1 id="intro">
+        
+        <div class ="centered">
+          <h1 id="intro" style= "color:#f3edea;font-family: Trebuchet MS;"> 
             Are you currently ill? Is there any discomfort in your body? MedCare is a resource you can use to do research on potential symptoms you may be experiencing!
-        </h1>
+          </h1>
+          
+           <!-- Symptom -->
+          
+           <div class="input-field">
+            <input
+              type="text"
+              id="sym"
+              placeholder="Symptom"
+              onFocus="this.placeholder=''"
+              required
+            />
+          </div>
 
-        <!-- Symptom -->
-        <div class="input-field">
-          <input
-            type="text"
-            id="sym"
-            placeholder="Symptom"
-            onFocus="this.placeholder=''"
-            required
-          />
+          <!-- Submit -->
+
+          <div style="text-align: center">
+            <button class="button" onclick="server.test()" type="submit">
+              Submit
+            </button>
+          </div>
+          
         </div>
-
+        
+        
         <span style="display: block; height: 30px"></span>
-
-        <!-- Submit -->
-
-        <div style="text-align: center">
-          <button class="button" onclick="server.test()" type="submit">
-            Submit
-          </button>
-        </div>
 
         <span style="display: block; height: 10px"></span>
         <p id="test">0</p>
       </div>
     </div>
+
+  </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   </body>
 </html>
