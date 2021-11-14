@@ -110,16 +110,20 @@ class App:
      
 
 @app.route("/")
+def start():
+    return App.render(render_template("index.html"))
+
+@app.route("/index.html")
 def index():
     return App.render(render_template("index.html"))
 
-@app.route("/about")
+@app.route("/SymptomChecker.html")
+def medCare():
+    return App.render(render_template("medCare.html"))
+
+@app.route("/aboutUs.html")
 def about():
-    return """
-    <h1 style='color: red;'>I'm a red H1 heading!</h1>
-    <p>This is a lovely little paragraph</p>
-    <code>Flask is <em>awesome</em></code>
-    """
+    return App.render(render_template("aboutUs.html"))
 
 if __name__ == '__main__':
     app.run(debug=True)
