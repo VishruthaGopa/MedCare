@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MedCare - Home</title>
-    <meta
-      name="viewport"
-      content="initial-scale=1,maximum-scale=1,user-scalable=no"
-    />
 
     <!-- <link
       rel="stylesheet"
       type="text/css"
       href="{{ url_for('static',filename='styles/styles.css') }}"
     /> -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./static/styles.css" />
 
     <link
       rel="stylesheet"
@@ -22,19 +20,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <style>
-      /*body,
-      html {
-        height: 100%;
-        margin: 0;
-      }
-      .bg {
-        background-image: url("https://media.discordapp.net/attachments/908766276623695922/909190340823638016/cosmeticdentalsmile.png?width=815&height=543");
-        height: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }*/
-
       body, html {
         height: 100%;
         margin: 0;
@@ -89,13 +74,13 @@
       <div class="collapse navbar-collapse" id="navbarNav"></div>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="/index.html">Home<span class="sr-only"></span></a>
+            <a class="nav-link" href="./templates/index.html">Home<span class="sr-only"></span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/SymptomChecker.html">SymptomChecker</a>
+            <a class="nav-link" href="./templates/medCare.html">SymptomChecker</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/aboutUs.html">About Us</a>
+            <a class="nav-link" href="./templates/aboutUs.html">About Us</a>
           </li>
         </ul>
       </div>

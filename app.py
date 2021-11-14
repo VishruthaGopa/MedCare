@@ -117,8 +117,8 @@ def start():
 def index():
     return App.render(render_template("index.html"))
 
-@app.route("/SymptomChecker.html")
-def medCare():
+@app.route("/medCare.html")
+def MedCare():
     return App.render(render_template("medCare.html"))
 
 @app.route("/aboutUs.html")
