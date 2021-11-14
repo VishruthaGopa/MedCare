@@ -21,6 +21,7 @@ class App:
 
     def test(self):
         # reset dropdowns
+        self.js.document.getElementById("intro").style.textAlign = "center"
         self.js.document.getElementById('dropOne').innerHTML = ""
         self.js.document.getElementById('dropTwo').innerHTML = ""
         self.js.document.getElementById('dropThree').innerHTML = ""
@@ -33,13 +34,15 @@ class App:
         dia=pd.read_csv('./csv-files/dia_t.csv').dropna()
         sym=pd.read_csv('./csv-files/sym_t.csv').dropna()
         
+        print(syd)
         diseases = sym[sym['symptom'].str.contains(self.symptom, flags=re.IGNORECASE)]
-    
+        
         if not diseases.empty:
             sympID = diseases["syd"].iloc[0]
             test = syd[syd['syd']==sympID].sort_values('wei',ascending=False)['did']
             for i in range(4):
                 output.append(dia[dia['did']==test.iloc[i]]['diagnose'].iloc[0])
+
 
             self.js.document.getElementById('message').innerHTML = "Here are some common diseases that have \"" +diseases["symptom"].iloc[0] + "\" as a symptom."
             self.js.document.getElementById('one').innerHTML =" 1." + output[0]
@@ -47,6 +50,7 @@ class App:
             self.js.document.getElementById('three').innerHTML = "3." + output[2]
             self.js.document.getElementById('four').innerHTML = "4." + output[3]
             
+
             def findInfo(item,index):
                 text =[]
                 out = []
@@ -63,15 +67,12 @@ class App:
                         link = str(a)
                         break
                 cutoff = str(a).index('&')
-                print(cutoff)
-                print (link[16:cutoff])
                 newlink = link[16:cutoff]
                 
                 # With the link, scrape the overview of the disease
                 html = requests.get(newlink).text
                 soup = BeautifulSoup(html,"html.parser")
                 link = ""
-             
                 # divs = soup.find_all("div", {"class": "content"})
                 p = soup.find_all("p")
                 for item in p:
@@ -79,7 +80,7 @@ class App:
 
                 for i in range(4,7):
                     out.append(list(filter(lambda a: a != "<p>", text[i])))  
-
+                print(out)
                 if index == 0:
                     self.js.document.getElementById('dropOne').innerHTML = str(*out[0])+str(*out[1])+str(*out[2])
                 elif index == 1:
@@ -95,7 +96,7 @@ class App:
                 else:
                     idx = len(items)
                 findInfo(items[:idx],count)  
-            
+
 
             
         else:
@@ -104,7 +105,6 @@ class App:
             self.js.document.getElementById('two').innerHTML = ""
             self.js.document.getElementById('three').innerHTML = ""
             self.js.document.getElementById('four').innerHTML = ""
-            self.js.document.getElementById('five').innerHTML = ""
     
 
      
@@ -113,20 +113,44 @@ class App:
 def start():
     return App.render(render_template("index.html"))
 
-@app.route("/index.html")
+@app.route("/templates/index.html")
 def index():
     return App.render(render_template("index.html"))
 
-@app.route("/medCare.html")
+@app.route("/templates/medCare.html")
 def MedCare():
     return App.render(render_template("medCare.html"))
 
-@app.route("/aboutUs.html")
+@app.route("/templates/aboutUs.html")
 def about():
     return App.render(render_template("aboutUs.html"))
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

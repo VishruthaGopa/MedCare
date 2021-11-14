@@ -34,7 +34,7 @@
         margin: 0;
       }
       .bg {
-        background-image: url("watercolour.JPG");
+        background-image: url("../static/imgs/watercolour.jpg");
         height: 100%;
         background-position: center;
         background-repeat: no-repeat;
@@ -55,9 +55,9 @@
 
   </head>
 
-  <body style="background-color: f3edea">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <img src="/imgs/logo cropped.JPG" class="img-logo" id="logo" alt="logo" width="250px" height="70px">
+  <body style="background-color: f3edea; text-align: left">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <img src="{{url_for('static', filename='imgs/logo cropped.jpg')}}"  class="img-logo" id="logo" alt="logo" width="250px" height="70px">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -79,8 +79,8 @@
     <div class="bg">
       <div class="container animate-top">
         <div class ="centered">
-          <h1 id="intro" style= "color:#f3edea;font-family: Trebuchet MS;"> 
-            Are you currently ill? Is there any discomfort in your body? MedCare is a resource you can use to do research on potential symptoms you may be experiencing!
+          <h1 id="intro" style = "color:#f3edea"> 
+            Our Symptom Checking Tool
           </h1>
   
           <!-- Symptom -->
@@ -94,7 +94,7 @@
               required
             />
           </div>
-
+          <span style="display: block; height: 40px"></span>
           <!-- Submit -->
 
           <div style="text-align: center">
@@ -104,42 +104,42 @@
           </div>
   
           <span style="display: block; height: 10px"></span>
-  
-          <p id="message"></p>
-          <div class="dropdown">
-            <span id="one"></span>
-            <div class="dropdown-content">
-              <p id="dropOne"></p>
+          <div id= dropdown-container>
+            <p id="message" style="color:#f3edea; font-weight: lighter;"></p>
+            <div class="dropdown">
+              <span id="one" style="color:#f3edea; font-weight: lighter;" ></span>
+              <div class="dropdown-content">
+                <p id="dropOne"></p>
+              </div>
+            </div>
+    
+            <span style="display: block; height: 10px"></span>
+            
+            <div class="dropdown">
+              <span id="two" style="color:#f3edea; font-weight: lighter;"></span>
+              <div class="dropdown-content">
+                <p id="dropTwo"></p>
+              </div>
+            </div>
+    
+            <span style="display: block; height: 10px"></span>
+    
+            <div class="dropdown">
+              <span id="three" style="color:#f3edea; font-weight: lighter;"></span>
+              <div class="dropdown-content">
+                <p id="dropThree"></p>
+              </div>
+            </div>
+    
+            <span style="display: block; height: 10px"></span>
+    
+            <div class="dropdown">
+              <span id="four" style="color:#f3edea; font-weight: lighter;"></span>
+              <div class="dropdown-content">
+                <p id="dropFour"></p>
+              </div>
             </div>
           </div>
-  
-          <span style="display: block; height: 10px"></span>
-  
-          <div class="dropdown">
-            <span id="two"></span>
-            <div class="dropdown-content">
-              <p id="dropTwo"></p>
-            </div>
-          </div>
-  
-          <span style="display: block; height: 10px"></span>
-  
-          <div class="dropdown">
-            <span id="three"></span>
-            <div class="dropdown-content">
-              <p id="dropThree"></p>
-            </div>
-          </div>
-  
-          <span style="display: block; height: 10px"></span>
-  
-          <div class="dropdown">
-            <span id="four"></span>
-            <div class="dropdown-content">
-              <p id="dropFour"></p>
-            </div>
-          </div>
-          
         </div>
       </div>
 

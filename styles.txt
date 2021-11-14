@@ -1,45 +1,17 @@
 
-/* nav bar */
-.navbar {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  text-align: right;
-  overflow: hidden;
-  background-color: #6671ec;
-  position: -webkit-sticky; /* Safari */
-}
+                # divs = soup.find_all("div", {"class": "content"})
+                p = soup.find_all("p")
+                for item in p:
+                    text.append(item)
 
-.navbar li {
-  float: right;
-}
+                for i in range(4,7):
+                    out.append(list(filter(lambda a: a != "<p>", text[i])))  
 
-.navbar li a {
-  display: block;
-  color: rgb(0, 0, 0);
-  text-align: right;
-  font-size: 30px;
-  padding: 28px 30px;
-  text-decoration: none;
-}
-
-.navbar li a:hover:not(.active) { /*HOVERING */
-  text-align: right;
-  background-color: #42b2e7;
-}
-
-.active { /*ACTIVE TAB */
-  text-align: right;
-  background-color: #ffffff;
-}
-
-/* nav bar end */
-
-
-
-/*ROUGH STARTS*/
-
-
-
-
-/*ROUGH ENDS*/
+                if index == 0:
+                    self.js.document.getElementById('dropOne').innerHTML = str(*out[0])+str(*out[1])+str(*out[2])
+                elif index == 1:
+                    self.js.document.getElementById('dropTwo').innerHTML = str(*out[0])+str(*out[1])+str(*out[2])
+                elif index == 2:
+                    self.js.document.getElementById('dropThree').innerHTML = str(*out[0])+str(*out[1])+str(*out[2])
+                else:
+                    self.js.document.getElementById('dropFour').innerHTML = str(*out[0])+str(*out[1])+str(*out[2])

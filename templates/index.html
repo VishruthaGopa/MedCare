@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MedCare - Home</title>
 
-    <!-- <link
+    <link
       rel="stylesheet"
       type="text/css"
       href="{{ url_for('static',filename='styles/styles.css') }}"
-    /> -->
+    />
     <link rel="stylesheet" href="./static/styles.css" />
 
     <link
@@ -30,20 +30,30 @@
         box-sizing: border-box;
       }
 
-      .bg-image {
-        /* Full height */
-        height: 100%; 
-        
-        /* Center and scale the image nicely */
+
+      /* Images used */
+      .img1 { 
+        background-image: url("../static/imgs/medlab.jpg");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    
+      }
+      .img2 { 
+        background-image: url("../static/imgs/smile-photo.png");
+        height: 100%;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
       }
-
-      /* Images used */
-      .img1 { background-image: url("/imgs/medlab.jpg"); }
-      .img2 { background-image: url("/imgs/smile-photo.png"); }
-      .img3 { background-image: url("/imgs/write.jpg"); }
+      .img3 { 
+        background-image: url("../static/imgs/write.jpg");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        }   
 
       /* Position text in the middle of the page/image */
       .bg-text {
@@ -66,8 +76,8 @@
   </head>
 
   <body style="background-color: f3edea">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <img src="/imgs/logo cropped.JPG" class="img-logo" id="logo" alt="logo" width="250px" height="70px">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <img src="{{url_for('static', filename='imgs/logo cropped.jpg')}}" class="img-logo" id="logo" alt="logo" width="250px" height="70px" position="absolute">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -88,9 +98,14 @@
     
     <!--<div class="bg"></div>-->
     
-    <div class="bg-image img1"></div>
-    <div class="bg-image img2"></div>
-    <div class="bg-image img3"></div>
+
+    <div class="img1"></div>
+    <div class="img2"></div>
+    <div class="img3"></div>
+
+    <!-- <div class="bg-image img1"><img src="{{url_for('static', filename='imgs/medlab.jpg')}}"></div>
+    <div class="bg-image img2"><img src="{{url_for('static', filename='imgs/smile-photo.png')}}"></div>
+    <div class="bg-image img3"><img src="{{url_for('static', filename='imgs/write.jpg')}}"></div> -->
 
     <div class="bg-text">
         Are you trying to figure out what's causing your symptoms? We hope this helps you identify your symptoms and potential conditions.
