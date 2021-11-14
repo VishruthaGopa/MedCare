@@ -1,17 +1,49 @@
-# import numpy as np
-# import pandas as pd 
+import numpy as np
+import pandas as pd 
 
 import requests
 from bs4 import BeautifulSoup
 
-item = "cough"
-html = requests.get('https://www.google.com/search?q=ice cream').text
-soup = BeautifulSoup(html, 'html.parser')
+syd=pd.read_csv('./csv-files/diffsydiw.csv').dropna()
+dia=pd.read_csv('./csv-files/dia_t.csv').dropna()
+sym=pd.read_csv('./csv-files/sym_t.csv').dropna()
 
-# locating .tF2Cxc class
-# calling for <a> tag and then calling for 'href' attribute
-link = soup.select('.yuRUbf a')['href']
-print(link)
+
+text =[]
+# Automatically find a link to mayoclinic - a reputable site I think
+item = "acute liver disease"
+html = requests.get('https://www.google.com/search?q='+item).text
+soup = BeautifulSoup(html,"html.parser")
+link = ""
+for a in soup.find_all('a',  href = True):
+    if("mayoclinic.org/diseases" in str(a)):
+        print(a)
+        link = str(a)
+        break
+cutoff = str(a).index('&')
+print(cutoff)
+print (link[16:cutoff])
+newlink = link[16:cutoff]
+
+
+# With The link, scrape the overview of the disease
+html = requests.get(newlink).text
+soup = BeautifulSoup(html,"html.parser")
+link = ""
+divs = soup.find_all("div", {"class": "content"})
+p = soup.find_all("p")
+for item in p:
+    text.append(item)
+
+for i in range(2,5):
+    print (*list(filter(lambda a: a != "<p>", text[i])))
+
+
+
+
+
+
+
 
 
 # syd=pd.read_csv('diffsydiw.csv').dropna()
